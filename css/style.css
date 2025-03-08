@@ -57,7 +57,7 @@ body {
   /*header section*/
   .hero_area {
     height: 100vh;
-    background-image: url(../images/hero-bg.jpg);
+    background-image: url(../img/hero-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -191,7 +191,7 @@ body {
   }
   
   .custom_nav-container .nav_search-btn {
-    background-image: url(../images/search-icon.png);
+    background-image: url(../img/search-icon.png);
     background-size: 22px;
     background-repeat: no-repeat;
     background-position-y: 7px;
@@ -230,7 +230,7 @@ body {
   }
   
   .custom_nav-container .navbar-toggler .navbar-toggler-icon {
-    background-image: url(../images/menu.png);
+    background-image: url(../img/menu.png);
     background-size: 55px;
   }
   #mycontainer{
