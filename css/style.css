@@ -241,31 +241,11 @@ body {
     width: 100%;
     display: block;
   }
-  .vertical-line{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    border-left: 1px solid white;
-    height: 80px;
-    transform: translateX(-50%);
-  }
-  .text-above-line{
-    position: absolute;
-    top: calc(50% - 140px);
-    color: white;
-    font-size: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-weight: bold;
-  }
-  #text{
-    position: absolute;
-    top: calc(50% - 140px);
-    color: white;
-    font-size: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-weight: bold;
+  .image-wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
   }
   .green-fog {
     position:absolute;
@@ -273,7 +253,7 @@ body {
     left: 0;
     width: 100%;
     height: 50%;
-    background: linear-gradient(to top, rgba(0, 255, 0, 0.7), rgba(0, 255, 0, 0));
+    background: linear-gradient(to top, rgba(114, 238, 114, 0.8), rgba(0, 255, 0, 0));
   }
   .fog-text {
     position: absolute;
@@ -286,17 +266,103 @@ body {
     color: white;
   }
   .fog-part {
-    text-shadow: 0 0 8px rgba(0, 255, 0, 0.6);
-    color: rgba(0, 255, 0, 0.8);
+    color: rgba(114, 238, 114, 0.8);
   }
   .slanted-text {
     position: absolute;
-    top: 50%;
-    left: 10%;
+    top: 46%;
+    left: 8%;
     transform: translateY(-50%) rotate(-270deg);
     color:white;
-    font-size: 150px;
+    font-size: 140px;
     font-weight: bold;
-    font-family:Arial, sans-serif;
-    white-space: nowrap;
+    z-index: 2;
+  }
+  .vertical-line{
+    width: 2px ;
+    height: 50px;
+    margin: 0 auto;
+    background-color: white;
+  }
+  .flipped-r {
+    display:inline-block;
+    transform: scaleX(-1);
+  }
+  .text-above-line{
+    position:absolute;
+    top: calc(40% - 35px);
+    left: 45%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    z-index: 10;
+  }
+  .contact-btn{
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+  }
+  .contact-btn:hover{
+    background-color:white;
+    color: black;
+  }
+  .vertical-line.contact-btn{
+    z-index: 10;
+    position: relative;
+  }
+  .slide{
+    width: 100vw;
+    height: 100%;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+  }
+  @keyframes slideCarousel {
+    0% {transform: translateX(0);}
+    14.28% {transform: translateX(0);}
+    28.56% {transform: translateX(-100vw);}
+    42.84% {transform: translateX(-100vw);}
+    57.13% {transform: translateX(-200vw);}
+    71.41% {transform: translateX(-200vw);}
+    100% {transform: translateX(0);}
+  }
+  .button{
+    padding: 10px 20px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 20px;
+  }
+  .carousel {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    animation: slideCarousel 15s ease-in-out infinite;
+  }
+  #slide-1 {
+    transform: translateX(0);
+  }
+  #slide-2 {
+    transform: translateX(100vw);
+  }
+  #slide-3 {
+    transform: translateX(200vw);
+  }
+  .background-image{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
   }
